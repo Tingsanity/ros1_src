@@ -164,10 +164,10 @@ class person(threading.Thread):
         # print("initial data",self.filteredY)
         # print(ospy.Subscriber("Alex", Person, self.sensor1_callback)
         self.sub_s2 = rospy.Subscriber("Ben", Person, self.sensor2_callback)
-        self.sub_s3 = rospy.Subscriber("Mary", Person, self.sensor3_callback)"avgFilter{}/n".format(self.avgFilter))
+        self.sub_s3 = rospy.Subscriber("Mary", Person, self.sensor3_callback)("avgFilter{}/n".format(self.avgFilter))
         self.norospy.Subscriber("Alex", Person, self.sensor1_callback)
         self.sub_s2 = rospy.Subscriber("Ben", Person, self.sensor2_callback)
-        self.sub_s3 = rospy.Subscriber("Mary", Person, self.sensor3_callback)mal = np.mean(self.filteredY)   
+        self.sub_s3 = rospy.Subscriber("Mary", Person, self.sensor3_callback)#mal = np.mean(self.filteredY)   
         self.acc = self.filteredY[self.flag]
          
         self.MaxMin = np.max(self.filteredY) - np.min(self.filteredY)
