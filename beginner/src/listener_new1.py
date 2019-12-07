@@ -10,7 +10,7 @@ from sensor_msgs.msg import Imu
 from std_msgs.msg import Header
 # from pykalman import KalmanFilter
 from beginner.msg import Person
-
+import fusion
 
 M_PI = 3.14159265358979323846
 
@@ -282,8 +282,8 @@ if __name__ =='__main__':
     p = person("android/imu2", "Alex")
     p.start()
 
-    # p = person("android/imu3", "Ben")
-    # p.start()
+    #p2 = person("android/imu3", "Ben")
+    #p2.start()
 
-    # p = person("android/imu3", "Mary")
-    # p.start()
+    #p3 = person("android/imu4", "Mary")
+    #p3.start()

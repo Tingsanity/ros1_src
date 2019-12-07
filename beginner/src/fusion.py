@@ -19,7 +19,7 @@ from dtaidistance import dtw
 class fusioner:
     def __init__(self):
         rospy.init_node("fusioner")
-        self.sub_h = rospy.Subscriber("obstacles1", Obstacles, self.human_callback)
+        self.sub_h = rospy.Subscriber("obstacles", Obstacles, self.human_callback)
         # self.sub_h1 = rospy.Subscriber("obstacles_2", Obstacles, self.human_callback1)
         # self.sub_h2 = rospy.Subscriber("obstacles_3", Obstacles, self.human_callback2)
         # self.sub_h3 = rospy.Subscriber("obstacles_4", Obstacles, self.human_callback3)

@@ -1,8 +1,9 @@
 <!-- Reusable launch file for obstacle detection //one_person_rurun two_person_follow.bag two_person.bag-->
 <launch>
   
-  <node name="scans_demo" pkg="rosbag" type="play" args="--clock --loop $(find obstacle_detector)/resources/CASE/case1_1"/>
+  <node name="scans_demo" pkg="rosbag" type="play" args="--clock --loop $(find obstacle_detector)/resources/others/two_person.bag"/>
 
+  <!--node name="android_imu" pkg="rostopic" type="echo" args="/android/imu"/-->
   
   <node name="rviz" pkg="rviz" type="rviz" output="screen" args="-d $(find obstacle_detector)/resources/obstacle_detector.rviz"/>
   
