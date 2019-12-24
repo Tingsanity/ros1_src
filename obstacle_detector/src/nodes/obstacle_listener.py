@@ -13,10 +13,13 @@ class obstacle_sub:
 
     def obstaclecallback(self,data):
         self.circle_vec = data.circles
-        
+        check = False
         for circle in self.circle_vec:
             with open("test.csv","a") as csvfile:
                 writer =csv.writer(csvfile)
+                if (!check):
+                    writer.writerow([id,x,y,rad,trad])
+                    check = True
                 print(circle.id)
                 print(circle.center.x)
                 print(circle.center.y)
